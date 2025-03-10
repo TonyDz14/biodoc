@@ -37,8 +37,7 @@ export default function FichasTecnicas() {
 
   return (
     <VStack spacing={4} w="full">
-      
-
+      {/* Botón para mostrar/ocultar las fichas técnicas */}
       <MotionButton
         w="full"
         size="lg"
@@ -51,6 +50,7 @@ export default function FichasTecnicas() {
         {showFichas ? "Ocultar Fichas Técnicas" : "Ver Fichas Técnicas"}
       </MotionButton>
 
+      {/* Mostrar las fichas técnicas solo si se seleccionan */}
       {showFichas && (
         <Grid templateColumns="repeat(auto-fit, minmax(250px, 1fr))" gap={4} w="full">
           {fichasTecnicas.map((ficha, index) => (
@@ -66,7 +66,7 @@ export default function FichasTecnicas() {
                   colorScheme="blue"
                   size="sm"
                   mt={2}
-                  onClick={() => window.open(ficha.url, "_blank")}
+                  onClick={() => window.open(ficha.url, "_blank")}  // Abre el PDF en una nueva pestaña
                 >
                   Ver PDF
                 </Button>
@@ -77,7 +77,7 @@ export default function FichasTecnicas() {
                     colorScheme="blue"
                     size="sm"
                     mt={2}
-                    onClick={() => setSelectedFicha(ficha.url)}
+                    onClick={() => setSelectedFicha(ficha.url)}  // Muestra la vista previa
                   >
                     Ver PDF
                   </Button>
@@ -86,7 +86,7 @@ export default function FichasTecnicas() {
                   {selectedFicha === ficha.url && (
                     <Box w="full" mt={4} h="400px" overflow="hidden" border="1px solid gray" position="relative">
                       <iframe
-                        src={ficha.url}
+                        src={ficha.url}  // Muestra el PDF en el iframe
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -97,7 +97,7 @@ export default function FichasTecnicas() {
                         colorScheme="red"
                         size="sm"
                         mt={2}
-                        onClick={() => setSelectedFicha(null)} // Esto cierra la vista previa
+                        onClick={() => setSelectedFicha(null)} // Cierra la vista previa
                         position="absolute"
                         top="10px"
                         right="10px"

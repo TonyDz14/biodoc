@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Heading, VStack, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
-import { FaFilePdf, FaEye, FaEyeSlash } from "react-icons/fa";  // Importamos los íconos de ojo
+import { Box, Button, VStack, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
+import { FaFilePdf, FaEye, FaEyeSlash } from "react-icons/fa"; // Importamos los íconos de ojo
 import { motion } from "framer-motion";
 
 // Detectar si el dispositivo es móvil
@@ -35,8 +35,6 @@ export default function Certificados() {
 
   return (
     <VStack spacing={4} w="full">
-      
-
       {/* Botón para mostrar/ocultar certificados */}
       <MotionButton
         w="full"
@@ -92,7 +90,14 @@ export default function Certificados() {
 
                   {/* Vista previa del PDF en pantallas grandes */}
                   {selectedCertificado === certificado.url && (
-                    <Box w="full" mt={4} h="400px" overflow="hidden" border="1px solid gray" position="relative">
+                    <Box
+                      w="full"
+                      mt={4}
+                      h="400px"
+                      overflow="hidden"
+                      border="1px solid gray"
+                      position="relative"
+                    >
                       <iframe
                         src={certificado.url}
                         width="100%"

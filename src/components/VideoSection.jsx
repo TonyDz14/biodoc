@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { VStack, Heading, Button, Grid, GridItem, Box, Icon, Text } from "@chakra-ui/react";
+import { VStack, Button, Grid, GridItem, Box, Icon, Text } from "@chakra-ui/react";
 import { FaVideo } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -19,8 +19,6 @@ export default function VideoSection() {
 
   return (
     <VStack spacing={4} w="full">
-      
-
       {/* Botón para alternar entre ver y ocultar videos */}
       <MotionButton
         w="full"

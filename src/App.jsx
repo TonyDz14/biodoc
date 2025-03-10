@@ -77,7 +77,7 @@ export default function App() {
             }}
           >
             <Image
-              src="/colibri.png"
+              src="/colibri.png" // Ruta absoluta
               alt="Imagen de un colibrí"
               objectFit="contain"  // Ajusta la imagen para que no se recorte
             />
@@ -113,7 +113,7 @@ export default function App() {
               <Image
                 borderRadius="full"
                 boxSize="120px"
-                src="/logo.png"
+                src="/logo.png"  // Ruta absoluta
                 alt="Logo"
                 mb={4}
               />

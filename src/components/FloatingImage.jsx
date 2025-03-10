@@ -20,10 +20,10 @@ const FloatingImage = ({ scrollToTop }) => {
         boxShadow="lg"
       >
         <Image
-          src="/colibri.png"
+          src="/colibri.png" // Ruta absoluta de la imagen (asegúrate de tenerla en la carpeta 'public')
           alt="Imagen de un colibrí"
-          objectFit="contain"
-          boxSize="full"
+          objectFit="contain" // Ajusta la imagen para que no se recorte
+          boxSize="full" // Hace que la imagen ocupe todo el espacio disponible dentro del botón
         />
       </Button>
     </Box>
